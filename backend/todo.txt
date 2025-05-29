@@ -1,0 +1,6 @@
+- do linting
+- formatting 
+- commands: npx prisma migrate dev --name init
+- npm install npx prisma generate
+- add testing jest
+- check your project github
