@@ -1,5 +1,9 @@
 import { Router } from 'express';
-import { createApartment, getApartmentById, getApartments } from '../controllers/apartment.controller';
+import {
+  createApartment,
+  getApartmentById,
+  getApartments,
+} from '../controllers/apartment.controller';
 
 const router = Router();
 

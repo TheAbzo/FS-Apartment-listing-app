@@ -3,10 +3,10 @@ import prisma from '../prisma/client';
 
 export const getApartments = async (req: Request, res: Response) => {
   const skip = parseInt(req.query.skip as string) || 0;
-  const take = parseInt(req.query.take as string) || 9; 
+  const take = parseInt(req.query.take as string) || 9;
 
   try {
-    const total = await prisma.apartment.count(); 
+    const total = await prisma.apartment.count();
 
     const apartments = await prisma.apartment.findMany({
       skip,
@@ -20,14 +20,12 @@ export const getApartments = async (req: Request, res: Response) => {
   }
 };
 
-
-
 export const getApartmentById: RequestHandler = async (req, res) => {
   const id = Number(req.params.id);
   const apartment = await prisma.apartment.findUnique({ where: { id } });
   if (!apartment) {
     res.status(404).json({ error: 'Not found' });
-    return;  
+    return;
   }
   res.json(apartment);
 };

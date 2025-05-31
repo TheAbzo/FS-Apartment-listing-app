@@ -4,13 +4,15 @@
     "description": "",
     "main": "index.js",
     "prisma": {
-        "seed": "ts-node prisma/seed.ts"
-    },
+    "seed": "ts-node prisma/seed.ts"
+  },
     "scripts": {
         "build": "tsc",
         "start": "node dist/index.js",
         "dev": "ts-node-dev src/index.ts",
-        "seed": "prisma db seed"
+        "seed": "prisma db seed",
+        "format:write": "prettier --config ./.prettierrc --write \"src/**/*{.ts,.tsx,.js,.jsx,.json,.css,.scss}\""
+
     },
     "keywords": [],
     "author": "",
@@ -23,7 +25,7 @@
         "express": "^5.1.0"
     },
     "devDependencies": {
-        "@types/cors": "^2.8.18",
+      "@types/cors": "^2.8.18",
         "@types/express": "^5.0.2",
         "@types/node": "^22.15.29",
         "prisma": "^6.8.2",

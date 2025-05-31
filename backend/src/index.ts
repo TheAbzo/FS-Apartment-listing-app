@@ -6,10 +6,12 @@ const app = express();
 const PORT = 4000;
 
 // Allow frontend container (using service name `frontend`) to access backend
-app.use(cors({
-  origin: 'http://localhost:3000',
-  credentials: true,
-}));
+app.use(
+  cors({
+    origin: 'http://localhost:3000',
+    credentials: true,
+  })
+);
 
 app.options('*', cors()); // Allow preflight
 
