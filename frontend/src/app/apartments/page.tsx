@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { Row, Col } from 'antd';
 import ApartmentCard from '@/components/ApartmentCard/ApartmentCard';
 import SearchBar from '@/components/SearchBar/SearchBar';
@@ -11,7 +12,7 @@ const apartments = [
     id: 1,
     title: 'Modern Studio',
     description: 'Downtown · 1 Bed · $800/mo',
-   image: '/images/apartment.webp',
+    image: '/images/apartment.webp',
   },
   {
     id: 2,
@@ -30,22 +31,25 @@ const apartments = [
 const Page = () => {
   return (
     <div className={styles.wrapper}>
-      <Header title = {'Urban finder'} />
+      <Header title={'Urban finder'} />
       <div className={styles.searchWrapper}>
         <SearchBar />
       </div>
       <div className={styles.apartmentList}>
-        <Row gutter={[16, 16]}>
-          {apartments.map((apt) => (
-            <Col key={apt.id} xs={24} sm={12} md={8}>
-              <ApartmentCard
-                title={apt.title}
-                description={apt.description}
-                image={apt.image}
-              />
-            </Col>
-          ))}
-        </Row>
+       <Row gutter={[16, 16]}>
+  {apartments.map((apt) => (
+    <Col key={apt.id} xs={24} sm={12} md={8}>
+      <Link href={`/apartments/${apt.id}`} style={{ display: 'block' }}>
+        <ApartmentCard
+          title={apt.title}
+          description={apt.description}
+          image={apt.image}
+        />
+      </Link>
+    </Col>
+  ))}
+</Row>
+
       </div>
     </div>
   );
