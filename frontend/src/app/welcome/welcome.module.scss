@@ -1,38 +1,38 @@
 .container {
-    height: 100vh;
-    display: flex;
-    align-items: anchor-center;
-    justify-content: center;
-    background: url(/images/welcome_page.webp) no-repeat center center;
-    background-size: cover;
-  }
-  .wrapper{
-    display:flex;
-      flex-direction: column;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  align-items: anchor-center;
+  justify-content: center;
+  background: url(/images/welcome_page.webp) no-repeat center center;
+  background-size: cover;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .title {
     font-size: 3rem;
     font-weight: bold;
     color: $primary-color;
-    text-shadow: -1px -1px 0 $turquoise-color, 1px -1px 0 $turquoise-color, -1px 1px 0 $secondary-color, 1px 1px 0 $secondary-color;
+    text-shadow:
+      -1px -1px 0 $turquoise-color,
+      1px -1px 0 $turquoise-color,
+      -1px 1px 0 $secondary-color,
+      1px 1px 0 $secondary-color;
   }
-  
+
   .button {
-     width: 90px;
+    width: 90px;
     height: 50px;
     color: $primary-color;
     background-color: $secondary-color;
     cursor: pointer;
     border-width: 1px;
     border-radius: 6px;
-    &:hover{
-    color: $secondary-color;
-    border-color: $secondary-color;
-    background-color: $primary-color;
+    &:hover {
+      color: $secondary-color;
+      border-color: $secondary-color;
+      background-color: $primary-color;
     }
   }
-  }
-  
-
-  
-  
+}

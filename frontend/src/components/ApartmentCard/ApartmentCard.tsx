@@ -15,13 +15,7 @@ const ApartmentCard = ({ title, description, image }: ApartmentCardProps) => (
   <Card
     hoverable
     cover={
-      <Image
-        src={image}
-        alt={title}
-        width={200}
-        height={100}
-        style={{ objectFit: 'cover' }}
-      />
+      <Image src={image} alt={title} width={200} height={100} style={{ objectFit: 'cover' }} />
     }
   >
     <Meta title={title} description={description} />

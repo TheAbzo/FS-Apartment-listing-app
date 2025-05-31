@@ -54,8 +54,7 @@
   flex-direction: column;
   gap: 1.2rem;
   justify-content: center;
- padding: 40px 0 40px 40px;
-
+  padding: 40px 0 40px 40px;
 
   .title {
     color: $primary-color;
@@ -75,17 +74,17 @@
     line-height: 1.5;
     color: darken($secondary-color, 60%);
   }
-  button{
+  button {
     color: $primary-color;
     background-color: $secondary-color;
     cursor: pointer;
     border-width: 1px;
     border-radius: 6px;
     height: 42px;
-    &:hover{
-    color: $secondary-color;
-    border-color: $secondary-color;
-    background-color: $primary-color;
+    &:hover {
+      color: $secondary-color;
+      border-color: $secondary-color;
+      background-color: $primary-color;
     }
   }
 }

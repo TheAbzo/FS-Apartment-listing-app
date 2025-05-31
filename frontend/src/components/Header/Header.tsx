@@ -6,7 +6,7 @@ type HeaderProps = {
   title: string;
 };
 
-const Header = ({title}:HeaderProps) => {
+const Header = ({ title }: HeaderProps) => {
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>{title}</h1>

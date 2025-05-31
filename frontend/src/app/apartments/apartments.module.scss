@@ -1,13 +1,12 @@
-.wrapper{
-    background-color: $secondary-color;
-    min-height: 100vh;
-    padding: 4em;
+.wrapper {
+  background-color: $secondary-color;
+  min-height: 100vh;
+  padding: 4em;
 
-    .apartmentList {
-        margin-top:32px;
-        height: 70vh; 
-        overflow-y: auto;
-        padding-right: 1rem;
-    }
-    
+  .apartmentList {
+    margin-top: 32px;
+    height: 70vh;
+    overflow-y: auto;
+    padding-right: 1rem;
+  }
 }

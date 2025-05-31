@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image'; 
+import Image from 'next/image';
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import styles from './apartmentDetails.module.scss';
 import React, { use } from 'react';
@@ -13,7 +13,7 @@ type PageProps = {
 
 const Page = ({ params }: PageProps) => {
   const { id } = use(params);
-    const router = useRouter();
+  const router = useRouter();
   console.log(id);
 
   const apartment = {
@@ -24,8 +24,8 @@ const Page = ({ params }: PageProps) => {
       'A beautiful modern studio apartment located in the heart of the city. Spacious and well-lit with modern amenities.',
   };
 
-   const handleContactClick = () => {
-    router.push('/welcome'); 
+  const handleContactClick = () => {
+    router.push('/welcome');
   };
   return (
     <div className={styles.wrapper}>
@@ -40,7 +40,7 @@ const Page = ({ params }: PageProps) => {
           <Image
             src={apartment.image}
             alt={apartment.title}
-            width={600} 
+            width={600}
             height={400}
             style={{ objectFit: 'cover' }}
           />

@@ -1,9 +1,10 @@
 .searchBarWrapper {
-    margin-bottom: 32px;
-    pointer-events: none;
-    cursor: not-allowed;
+  margin-bottom: 32px;
+  pointer-events: none;
+  cursor: not-allowed;
   input {
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       border-color: $primary-color;
     }
   }
@@ -12,7 +13,8 @@
     background-color: $primary-color;
     border-color: $primary-color;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background-color: darken($primary-color, 10%);
       border-color: darken($primary-color, 10%);
     }

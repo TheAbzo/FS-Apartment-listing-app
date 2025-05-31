@@ -18,28 +18,26 @@ type Apartment = {
   price: number;
   size: number;
   reserved: boolean;
-  createdAt: string; 
+  createdAt: string;
 };
 
 const Page = () => {
-const [apartments, setApartments] = useState<Apartment[]>([]);
+  const [apartments, setApartments] = useState<Apartment[]>([]);
   const [skip, setSkip] = useState(0);
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
-
 
   const fetchApartments = useCallback(async () => {
     if (loading || !hasMore) return;
 
     setLoading(true);
     try {
-  
-    const res = await fetch(`/api/apartments?skip=${skip}&take=${PAGE_SIZE}`);
+      const res = await fetch(`/api/apartments?skip=${skip}&take=${PAGE_SIZE}`);
 
       const data = await res.json();
 
       if (data.length < PAGE_SIZE) {
-        setHasMore(false); 
+        setHasMore(false);
       }
 
       setApartments((prev) => [...prev, ...data]);
@@ -51,28 +49,28 @@ const [apartments, setApartments] = useState<Apartment[]>([]);
     }
   }, [skip, loading, hasMore]);
 
- useEffect(() => {
-  if (apartments.length === 0) fetchApartments();
-}, []); 
+  useEffect(() => {
+    if (apartments.length === 0) fetchApartments();
+  }, []);
 
   // Scroll event handler
-useEffect(() => {
-  const container = document.querySelector(`.${styles.apartmentList}`);
-  if (!container) return;
+  useEffect(() => {
+    const container = document.querySelector(`.${styles.apartmentList}`);
+    if (!container) return;
 
-  const onScroll = () => {
-    if (
-      container.scrollTop + container.clientHeight >= container.scrollHeight - 100 &&
-      !loading &&
-      hasMore
-    ) {
-      fetchApartments();
-    }
-  };
+    const onScroll = () => {
+      if (
+        container.scrollTop + container.clientHeight >= container.scrollHeight - 100 &&
+        !loading &&
+        hasMore
+      ) {
+        fetchApartments();
+      }
+    };
 
-  container.addEventListener('scroll', onScroll);
-  return () => container.removeEventListener('scroll', onScroll);
-}, [fetchApartments, loading, hasMore]);
+    container.addEventListener('scroll', onScroll);
+    return () => container.removeEventListener('scroll', onScroll);
+  }, [fetchApartments, loading, hasMore]);
 
   return (
     <div className={styles.wrapper}>
