@@ -8,7 +8,7 @@ A fullstack, secure, and responsive apartment listing web application built with
 
 - 📱 **Responsive:** Optimized UI/UX for desktop, tablet, and mobile views.
 
-- 🔁 **Infinite Scrolling:** Effortless apartment browsing with pagination handled via infinite scrolling.
+- 🔁 **Infinite Scrolling:** Effortless apartment browsing with pagination handled via infinite scrolling.(WIP)
 
 - 🏠 **Simple Navigation Flow:**
 
