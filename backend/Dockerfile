@@ -11,5 +11,4 @@ RUN npm run build
 
 EXPOSE 5000
 
-# ✅ Generate Prisma Client at runtime
-CMD ["sh", "-c", "npx prisma generate && npx prisma db push && node dist/index.js"]
+CMD ["sh", "-c", "npx prisma generate && npx prisma db push && npx prisma db seed && node dist/index.js"]

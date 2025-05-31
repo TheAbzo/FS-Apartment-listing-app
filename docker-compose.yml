@@ -10,6 +10,13 @@ services:
       - postgres
     environment:
       - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/apartments
+    command: >
+      sh -c "
+      npx prisma generate &&
+      npx prisma db push &&
+      npx prisma db seed &&
+      node dist/index.js
+      "
 
   frontend:
     build: ./frontend
