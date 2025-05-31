@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
     includePaths: [path.join(__dirname, 'styles')],
     prependData: `@import "variables.scss";`, 
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'http://backend:4000/:path*', // Talk to backend container
+      },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -3,8 +3,11 @@
     min-height: 100vh;
     padding: 4em;
 
-    .apartment-list{
+    .apartmentList {
         margin-top:32px;
+        height: 70vh; 
+        overflow-y: auto;
+        padding-right: 1rem;
     }
     
 }

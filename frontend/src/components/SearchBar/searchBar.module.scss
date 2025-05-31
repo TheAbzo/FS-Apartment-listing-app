@@ -1,5 +1,7 @@
 .searchBarWrapper {
     margin-bottom: 32px;
+    pointer-events: none;
+    cursor: not-allowed;
   input {
     &:hover, &:focus {
       border-color: $primary-color;
