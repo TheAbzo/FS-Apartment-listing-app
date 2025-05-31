@@ -13,22 +13,22 @@
   .title {
     font-size: 3rem;
     font-weight: bold;
-    color: #008080;
-    text-shadow: -1px -1px 0 #43e8d8, 1px -1px 0 #43e8d8, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+    color: $primary-color;
+    text-shadow: -1px -1px 0 $turquoise-color, 1px -1px 0 $turquoise-color, -1px 1px 0 $secondary-color, 1px 1px 0 $secondary-color;
   }
   
   .button {
      width: 90px;
     height: 50px;
-    color: #008080;
-    background-color: #ffffff;
+    color: $primary-color;
+    background-color: $secondary-color;
     cursor: pointer;
     border-width: 1px;
     border-radius: 6px;
     &:hover{
-    color: #ffffff;
-    border-color: #ffffff;
-    background-color: #008080;
+    color: $secondary-color;
+    border-color: $secondary-color;
+    background-color: $primary-color;
     }
   }
   }
